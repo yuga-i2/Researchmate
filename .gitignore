@@ -1,0 +1,22 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+researchmate-venv/
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# ChromaDB storage (optional, if you don't want to push DB files)
+chroma_db/
+
+# Environment variables
+.env

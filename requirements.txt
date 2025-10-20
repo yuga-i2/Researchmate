@@ -1,0 +1,20 @@
+# core
+requests
+beautifulsoup4
+python-dotenv
+tqdm
+pandas
+PyPDF2
+pdfminer.six
+sentence-transformers
+chromadb
+faiss-cpu
+langchain
+transformers
+accelerate
+streamlit
+# optional: for local LLMs
+llama-cpp-python
+# utilities
+uvicorn
+fastapi
