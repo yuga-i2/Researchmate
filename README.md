@@ -156,26 +156,23 @@ python main.py --mode ingest --queries "AI in healthcare"
 
 ## 🌟 Future Improvements
 
-```bash
-# Planned or Potential Upgrades for ResearchMate
-
- Multi-source ingestion
+1. **Multi-source ingestion**
     → Add support for PubMed, IEEE Xplore, Springer, and arXiv APIs.
 
- RAG (Retrieval-Augmented Generation)
+2. **RAG (Retrieval-Augmented Generation)**
     → Integrate Gemini / GPT to generate contextual research summaries.
 
- Interactive filters
+3. **Interactive filters**
     → Allow sorting papers by date, relevance, and citation count.
 
- Fine-tuned embedding model
+4. **Fine-tuned embedding model**
     → Train or adapt a domain-specific embedding model for better similarity results.
 
- Cloud-hosted ChromaDB
+5. **Cloud-hosted ChromaDB**
     → Deploy vector database on cloud for multi-user collaboration.
 
- Research summarization & auto-tagging
+6. **Research summarization & auto-tagging**
     → Automatically generate paper abstracts, tags, and categories.
 
- Analytics Dashboard
+7. **Analytics Dashboard**
     → Add Streamlit dashboard to visualize research trends and topic clusters.
