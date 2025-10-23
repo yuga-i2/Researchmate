@@ -69,13 +69,14 @@ DATA_DIR=./data
 ### 🔍 Architecture Overview
 The system uses a Vector Database workflow to power its semantic search capabilities:
 flowchart TD
-    A[User enters query in Streamlit UI] --> B[App sends query to ResearchMate backend]
-    B --> C[Collector Module searches ArXiv & Semantic Scholar APIs]
-    C --> D[Valid papers are processed & cleaned]
-    D --> E[Embedder generates sentence embeddings using all-MiniLM-L6-v2]
-    E --> F[Embeddings stored in Chroma Vector Database]
-    F --> G[User runs query via UI or CLI]
-    G --> H[VectorStore retrieves top matching papers]
-    H --> I[Results displayed in Streamlit interface]
+    A[User enters query in Streamlit UI] --> B[App sends query to ResearchMate backend]
+    B --> C[Collector Module searches ArXiv & Semantic Scholar APIs]
+    C --> D[Valid papers are processed & cleaned]
+    D --> E[Embedder generates sentence embeddings using all-MiniLM-L6-v2]
+    E --> F[Embeddings stored in Chroma Vector Database]
+    F --> G[User runs query via UI or CLI]
+    G --> H[VectorStore retrieves top matching papers]
+    H --> I[Results displayed in Streamlit interface]
+
 
 
