@@ -118,45 +118,7 @@ This outlines the process for ingesting new papers and querying the database:
 7.  **Result Display (Streamlit UI):**
     The top-ranked papers are displayed interactively with their **titles, abstracts, and direct links** to the original sources.
 
-## 🧰 GitHub Best Practices
 
-Follow these steps to keep your ResearchMate repository clean and secure:
-
-### 1. .gitignore Setup
-Always include a `.gitignore` file to prevent uploading large or sensitive files.
-
-**Example important exclusions:**
-```bash
-__pycache__/
-.env          # Exclude API keys
-chroma_db/    # Exclude large local database
-data/         # Exclude downloaded paper data
-venv/         # Exclude virtual environment
-.DS_Store
-*.pyc
-
-```
-### 2. API Key Security
-- **Never commit your `.env` file.**
-- Store keys like `GEMINI_API_KEY` safely in your local `.env` (not in GitHub).
-- Use `.env.example` to share variable names without exposing secrets.
-
-### 3. Commit Hygiene
-Use clear, concise commit messages. Commit often and avoid pushing large binary files.
-
-- `Added Streamlit UI for querying`
-- `Refactored vectorstore structure`
-
-### 4. Branching Workflow
-Use feature branches for major changes.
-
-```bash
-git checkout -b feature/new-ui
-git add .
-git commit -m "Added modern Streamlit interface"
-git push origin feature/new-ui
-
-```
 ## 🧪 Testing
 Run ingestion tests:
 python main.py --mode ingest --queries "AI in healthcare"
