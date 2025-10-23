@@ -1,25 +1,46 @@
-# Researchmate
+<h1 align="center">🧠 ResearchMate</h1>
+<h3 align="center">AI-Powered Research Assistant for Intelligent Paper Discovery & Summarization</h3>
 
-Researchmate is a lightweight research assistant for fetching papers from arXiv and Semantic Scholar, extracting text from PDFs, creating embeddings, and performing RAG-style retrieval and summarization using LLMs.
+---
 
-Repository structure:
+## 🚀 Overview
+**ResearchMate** is a lightweight AI system that automatically **collects, embeds, and searches scientific papers** using semantic search.  
+It helps researchers and students quickly find relevant papers and insights — powered by **Gemini API**, **ChromaDB**, and **Streamlit**.
 
-researchmate/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── data/
-│   └── papers/ # downloaded PDFs and extracted text
-├── src/
-│   ├── __init__.py
-│   ├── app.py # CLI / main agent loop
-│   ├── collector.py # arXiv & Semantic Scholar fetchers
-│   ├── pdf_parser.py # PDF download & text extraction
-│   ├── embeddings.py # embedding model wrapper
-│   ├── vectorstore.py # wrapper for Chroma/FAISS
-│   ├── retriever.py # RAG retrieval utilities
-│   ├── summarizer.py # LLM prompt & summarization utilities
-│   ├── utils.py # helper functions (logging, rate-limit handling)
-│   └── streamlit_app.py # optional frontend
-└── notebooks/
-    └── quick_demo.ipynb
+---
+
+## ⚙️ Tech Stack
+
+| Layer | Technology |
+|--------|-------------|
+| **Backend** | Python + FastAPI / ChromaDB / SQLite |
+| **Frontend** | Streamlit |
+| **LLM** | Gemini API (default) / Ollama (optional) |
+| **Vector Store** | ChromaDB (default) / FAISS (fallback) |
+| **Data Sources** | arXiv + Semantic Scholar |
+
+---
+
+## 🗂️ Folder Structure
+
+```plaintext
+ResearchMate/
+│
+├── src/                    # Core application logic
+│   ├── app.py              # Main CLI entrypoint
+│   ├── collector.py        # Fetches papers from arXiv / Semantic Scholar
+│   ├── embedder.py         # Handles text embeddings via Gemini API
+│   ├── vectorstore.py      # ChromaDB storage & semantic search
+│   └── utils.py            # Helper utilities
+│
+├── data/                   # (Optional) Downloaded paper data
+├── chroma_db/              # Local Chroma database files
+├── notebooks/              # Jupyter demos / experiments
+├── streamlit_app.py        # Streamlit web interface
+├── requirements.txt        # Python dependencies
+├── .env.example            # Example environment variables
+├── .gitignore              # Files ignored by Git
+└── README.md
+
+---
+
