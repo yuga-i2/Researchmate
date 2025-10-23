@@ -9,6 +9,13 @@ It helps researchers and students quickly find relevant papers and insights — 
 
 ---
 
+## 🎥 Demo Video
+
+Watch the full project demo here:  
+👉 [ResearchMate Demo on YouTube](https://youtu.be/PjaX4Rp6A4U?si=N4lHCZP4Bk585XP3)
+
+---
+
 ## ⚙️ Tech Stack
 
 | Layer | Technology |
