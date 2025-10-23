@@ -44,3 +44,22 @@ ResearchMate/
 
 ---
 
+## 🔑 Environment Variables
+All API keys and configuration values are stored in a `.env` file (copy from `.env.example`).
+
+| Variable | Description | Example Value |
+| :--- | :--- | :--- |
+| `GEMINI_API_KEY` | Your Google Gemini API Key. | `your-gemini-api-key-here` |
+| `CHROMA_PATH` | Path to the local Chroma database directory. | `./chroma_db` |
+| `DATA_DIR` | Directory to store paper data. | `./data` |
+
+**Example `.env` file:**
+```bash
+# Google Gemini API Key
+GEMINI_API_KEY=your-gemini-api-key-here
+
+# Path to local Chroma database
+CHROMA_PATH=./chroma_db
+
+# Directory to store paper data
+DATA_DIR=./data
