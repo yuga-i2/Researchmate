@@ -83,32 +83,32 @@ flowchart TD
 ## ⚙️ Step-by-Step Workflow
 
 This outlines the process for ingesting new papers and querying the database:
-1.  **🧑‍💻 User Input (Streamlit App / CLI):**
+1.  **User Input (Streamlit App / CLI):**
     The user enters a research query — for example, _"applications of diffusion models"_ — via the Streamlit interface or command line.
 
-2.  **📚 Paper Collection (`src/collector.py`):**
+2.  **Paper Collection (`src/collector.py`):**
     The system searches academic databases such as **ArXiv** and **Semantic Scholar** using the query.
     - Each result includes a **title, abstract, authors, and URL**.
     - Invalid or incomplete entries are automatically filtered out.
 
-3.  **🧹 Text Extraction & Cleaning:**
+3.  **Text Extraction & Cleaning:**
     For each paper, the system extracts the **main text**, or falls back to the **abstract/title** when full text isn’t available.
 
-4.  **🧠 Embedding Generation (`src/embedder.py`):**
+4.  **Embedding Generation (`src/embedder.py`):**
     The cleaned text is passed through the **SentenceTransformer (`all-MiniLM-L6-v2`)** model.
     - Produces **384-dimensional semantic embeddings** that capture the paper’s meaning.
     - These embeddings enable context-based similarity search.
 
-5.  **💾 Vector Storage (`src/vectorstore.py`):**
+5.  **Vector Storage (`src/vectorstore.py`):**
     All embeddings, along with their documents and metadata (title, URL), are stored in a **ChromaDB collection** for fast and scalable vector search.
 
-6.  **🔍 Querying the Database (`src/app.py`):**
+6.  **Querying the Database (`src/app.py`):**
     When a new search is made, the system:
     - Embeds the query using the same model.
     - Compares it with stored paper vectors in Chroma.
     - Retrieves the **most semantically similar research papers**.
 
-7.  **📊 Result Display (Streamlit UI):**
+7.  **Result Display (Streamlit UI):**
     The top-ranked papers are displayed interactively with their **titles, abstracts, and direct links** to the original sources.
 
 ## 🧰 GitHub Best Practices
@@ -137,8 +137,8 @@ venv/         # Exclude virtual environment
 ### 3. Commit Hygiene
 Use clear, concise commit messages. Commit often and avoid pushing large binary files.
 
-- ✅ `Added Streamlit UI for querying`
-- ⚙️ `Refactored vectorstore structure`
+- `Added Streamlit UI for querying`
+- `Refactored vectorstore structure`
 
 ### 4. Branching Workflow
 Use feature branches for major changes.
@@ -159,23 +159,23 @@ python main.py --mode ingest --queries "AI in healthcare"
 ```bash
 # Planned or Potential Upgrades for ResearchMate
 
-🔗 Multi-source ingestion
+ Multi-source ingestion
     → Add support for PubMed, IEEE Xplore, Springer, and arXiv APIs.
 
-🧬 RAG (Retrieval-Augmented Generation)
+ RAG (Retrieval-Augmented Generation)
     → Integrate Gemini / GPT to generate contextual research summaries.
 
-🎛️ Interactive filters
+ Interactive filters
     → Allow sorting papers by date, relevance, and citation count.
 
-🧱 Fine-tuned embedding model
+ Fine-tuned embedding model
     → Train or adapt a domain-specific embedding model for better similarity results.
 
-☁️ Cloud-hosted ChromaDB
+ Cloud-hosted ChromaDB
     → Deploy vector database on cloud for multi-user collaboration.
 
-🧑‍🏫 Research summarization & auto-tagging
+ Research summarization & auto-tagging
     → Automatically generate paper abstracts, tags, and categories.
 
-📊 Analytics Dashboard
+ Analytics Dashboard
     → Add Streamlit dashboard to visualize research trends and topic clusters.
