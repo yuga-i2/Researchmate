@@ -11,8 +11,11 @@ It helps researchers and students quickly find relevant papers and insights — 
 
 ## 🎥 Demo Video
 
-Watch the full project demo here:  
-👉 [ResearchMate Demo on YouTube](https://youtu.be/PjaX4Rp6A4U?si=N4lHCZP4Bk585XP3)
+<p align="center">
+  <a href="https://youtu.be/PjaX4Rp6A4U?si=EMHq0jDP5RWJhO1e" target="_blank">
+    <img src="https://img.youtube.com/vi/PjaX4Rp6A4U/hqdefault.jpg" alt="Watch the demo video" width="600">
+  </a>
+</p>
 
 ---
 
