@@ -111,7 +111,6 @@ This outlines the process for ingesting new papers and querying the database:
 7.  **📊 Result Display (Streamlit UI):**
     The top-ranked papers are displayed interactively with their **titles, abstracts, and direct links** to the original sources.
 
-```
 ## 🧰 GitHub Best Practices
 
 Follow these steps to keep your ResearchMate repository clean and secure:
@@ -128,3 +127,55 @@ data/         # Exclude downloaded paper data
 venv/         # Exclude virtual environment
 .DS_Store
 *.pyc
+
+```
+### 2. API Key Security
+- **Never commit your `.env` file.**
+- Store keys like `GEMINI_API_KEY` safely in your local `.env` (not in GitHub).
+- Use `.env.example` to share variable names without exposing secrets.
+
+### 3. Commit Hygiene
+Use clear, concise commit messages. Commit often and avoid pushing large binary files.
+
+- ✅ `Added Streamlit UI for querying`
+- ⚙️ `Refactored vectorstore structure`
+
+### 4. Branching Workflow
+Use feature branches for major changes.
+
+```bash
+git checkout -b feature/new-ui
+git add .
+git commit -m "Added modern Streamlit interface"
+git push origin feature/new-ui
+
+```
+## 🧪 Testing
+Run ingestion tests:
+python main.py --mode ingest --queries "AI in healthcare"
+
+## 🌟 Future Improvements
+
+```bash
+# Planned or Potential Upgrades for ResearchMate
+
+🔗 Multi-source ingestion
+    → Add support for PubMed, IEEE Xplore, Springer, and arXiv APIs.
+
+🧬 RAG (Retrieval-Augmented Generation)
+    → Integrate Gemini / GPT to generate contextual research summaries.
+
+🎛️ Interactive filters
+    → Allow sorting papers by date, relevance, and citation count.
+
+🧱 Fine-tuned embedding model
+    → Train or adapt a domain-specific embedding model for better similarity results.
+
+☁️ Cloud-hosted ChromaDB
+    → Deploy vector database on cloud for multi-user collaboration.
+
+🧑‍🏫 Research summarization & auto-tagging
+    → Automatically generate paper abstracts, tags, and categories.
+
+📊 Analytics Dashboard
+    → Add Streamlit dashboard to visualize research trends and topic clusters.
